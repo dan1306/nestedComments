@@ -1,24 +1,13 @@
-import { Routes, Route } from "react-router-dom"
-import { Post } from "./components/Post"
-import { PostList } from "./components/PostLists"
-import { PostProvider } from "./contexts/PostContext"
+import { Routes,  Route } from "react-router-dom";
+import { Postlists } from "./components/PostLists";
 
 function App() {
   return (
-    <div className="container">
-      <Routes>
-        <Route path="/" element={<PostList />} />
-        <Route
-          path="/posts/:id"
-          element={
-            <PostProvider>
-              <Post />
-            </PostProvider>
-          }
-        />
-      </Routes>
-    </div>
-  )
+    <Routes>
+      <Route path="/" element={<Postlists />} />
+      <Route path="/posts/:id" element={<h1>himeme</h1>} />
+    </Routes>
+  );
 }
 
-export default App
+export default App;
