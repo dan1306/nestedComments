@@ -9,6 +9,9 @@ export function useAsync(func, dependancies = []) {
     useEffect(() => {
         executable()
     }, [executable])
+
+    console.log("state: ", state)
+    // console.log("executable: ", executable())
     
     return state
 }
